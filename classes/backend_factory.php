@@ -58,7 +58,7 @@ class BackendFactory {
 
          $args = array(
             'labels'             => $labels,
-            'description'        => __( 'Description.', 'backend-factory' ),
+            'description'        => __( 'iLab custom post types', 'backend-factory' ),
             'public'             => true,
             'publicly_queryable' => true,
             'show_ui'            => true,
@@ -69,7 +69,8 @@ class BackendFactory {
             'has_archive'        => true,
             'hierarchical'       => $cpt['hierarchical'],
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+            'supports'           => array( 'title', 'thumbnail'),
+            // 'supports'           => false,
             'taxonomies'         => array( 'category', 'post_tag' )
          );
 
