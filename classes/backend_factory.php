@@ -69,7 +69,7 @@ class BackendFactory {
             'has_archive'        => true,
             'hierarchical'       => $cpt['hierarchical'],
             'menu_position'      => null,
-            'supports'           => array( 'title', 'thumbnail'),
+            'supports'           => array( 'title', 'thumbnail'),//default
             // 'supports'           => false,
             'taxonomies'         => array( 'category', 'post_tag' )
          );

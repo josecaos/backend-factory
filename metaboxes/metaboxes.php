@@ -10,13 +10,13 @@ $field_types = array( "text", "url", "email", "integer", "float", "date", "time"
 $aliados_fields[] = array(
   // titulo logo
   array(
-    'field_name'            => 'aliados-cpt',
+    'field_name'            => 'aliados-titulo-logo',
     'field_type'            => $field_types[0],
     'repeatable'            => false,
     'related_post_types'    => false,
     'field_label'           => 'Titulo logo',
-    'description'           => 'Agrega el titulo que aparecerá en el slider de aliados',
-    'markup_function'       => 'standard_metabox_markup',
+    'description'           => 'Agrega el titulo que aparecerá en el logo, dentro del slider aliados',
+    // 'markup_function'       => 'standard_metabox_markup',
   )
 );
 
@@ -26,9 +26,9 @@ $metaboxes = array(
 
     'post_type'    => 'aliados',
     'name'         => 'aliados-cpt-metabox',
-    'title'        => 'Logos de aliados',
+    'title'        => 'Nombre de aliado',
 
-    'description'  => 'Ingresa los logos de tus aliados',
+    'description'  => 'Ingresa el título de logo aliado',
 
     'fields' => $aliados_fields[0]
   ),
