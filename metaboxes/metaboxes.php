@@ -4,6 +4,7 @@ global $metaboxes;
 
 
 $aliados_fields = array();
+$social_fields = array();
 $field_types = array( "text", "url", "email", "integer", "float", "date", "time", "textarea", "html", "upload" );
 
 
@@ -20,6 +21,141 @@ $aliados_fields[] = array(
   )
 );
 
+// redes sociales icono + link
+$social_fields[] = array(
+  // titulo logo
+  array(
+    'field_name'            => 'social-icono',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Icono Red Social ',
+    'description'           => 'Ingresa el nombre del ícono de la librería font-awesome.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'social-link',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Link de red social ',
+    'description'           => 'Agrega el link de la red social.',
+    'markup_function'       => 'standard_metabox_markup',
+  )
+);
+// Informacion staff
+$staff_fields[] = array(
+  // nombre - puesto - bio
+  array(
+    'field_name'            => 'staff-nombre',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Nombre',
+    'description'           => 'Ingresa el nombre del integrante.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'staff-puesto',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Puesto',
+    'description'           => 'Ingresa el puesto del integrante.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'staff-bio',
+    'field_type'            => $field_types[7],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Biografía integrante',
+    'description'           => 'Ingresa el la información del integrante.',
+    'markup_function'       => 'standard_metabox_markup',
+  )
+);
+// Informacion roockies
+$roockies_fields[] = array(
+  // nombre - generacion - proyecto - universidad - carrera
+  array(
+    'field_name'            => 'roockie-nombre',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Nombre',
+    'description'           => 'Ingresa el nombre del estudiante.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'roockie-generacion',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Generación',
+    'description'           => 'Ingresa la generación del estudiante.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'roockie-proyectos',
+    'field_type'            => $field_types[7],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Proyectos',
+    'description'           => 'Ingresa los proyectos del estudiante.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'roockie-universidad',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Universidad',
+    'description'           => 'Ingresa la universidad de formación del estudiante.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'roockie-carrera',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Carrera',
+    'description'           => 'Ingresa el la información del integrante.',
+    'markup_function'       => 'standard_metabox_markup',
+  )
+);
+// mentores
+// Informacion roockies
+$mentores_fields[] = array(
+  // nombre, Expertise y tema
+  array(
+    'field_name'            => 'mentor-nombre',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Nombre',
+    'description'           => 'Ingresa el nombre del docente.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'mentor-expertise',
+    'field_type'            => $field_types[7],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Formación',
+    'description'           => 'Ingresa la formación del docente.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'mentor-tema',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Tema',
+    'description'           => 'Ingresa tema del docente.',
+    'markup_function'       => 'standard_metabox_markup',
+  )
+);
+//
 $metaboxes = array(
 
   'aliados-metabox'=>array(
@@ -28,83 +164,50 @@ $metaboxes = array(
     'name'         => 'aliados-cpt-metabox',
     'title'        => 'Nombre de aliado',
 
-    'description'  => 'Ingresa el título de logo aliado',
+    'description'  => 'Ingresa el título de logo aliado.',
 
     'fields' => $aliados_fields[0]
   ),
 
-  'related-metabox'=>array(
+  'social-metabox'=>array(
 
-    'post_type'    => 'rpt',
-    'name'         => 'rpt-metabox',
-    'title'        => 'Related Post Type',
+    'post_type'    => 'social',
+    'name'         => 'social-cpt-metaboxes',
+    'title'        => 'Redes sociales',
+    'description'  => 'Ingresa el nombre del ícono, de la librería font-awesome. Lista de íconos: http://fontawesome.io/cheatsheet',
 
-    'description'  => 'Related Post Types',
-
-    'fields' => array(
-      array(
-        'field_name'            => 'rpt-test-cpt',
-
-        'field_type'            => 'related_post',
-        'repeatable'            => true,
-        'related_post_types'    => array('test-cpt'),
-
-        'field_label'           => 'Related Post Type Posts',
-        'description'           => '',
-        'markup_function'       => 'standard_metabox_markup'
-      ),
-    )
+    'fields' => $social_fields
   ),
 
-  'date-cpt-date-metabox'=>array(
+  'staff-metabox'=>array(
 
-    'post_type'    => 'date-cpt',
-    'name'         => 'date-cpt-metabox',
-    'title'        => 'Date CPT Metabox',
+    'post_type'    => 'staff',
+    'name'         => 'staff-cpt-metaboxes',
+    'title'        => 'Equípo de iLab',
+    'description'  => 'Ingresa los integrantes activos de el equipo iLab.',
 
-    'description'  => 'Fill in Date',
-
-    'fields' => array(
-
-      array(
-        'field_name'            => 'test-cpt-date',
-        'field_type'            => 'date',
-        'repeatable'            => false,
-        'field_label'           => 'Date Field',
-        'description'           => 'A date field.',
-        'markup_function'       => 'standard_metabox_html'
-      ),
-
-
-    )
+    'fields' => $staff_fields[0]
   ),
 
+  'roockies-metabox'=>array(
 
-  'repeatable-field-cpt' => array(
+    'post_type'    => 'roockies',
+    'name'         => 'roockies-cpt-metaboxes',
+    'title'        => 'Estudiantes de iLab',
+    'description'  => 'Ingresa la información sobre los Roockies.',
 
-    'post_type'    => 'repeatable-field-cpt',
-    'name'         => 'repeatable-test',
-    'title'        => 'Repeatable Test',
-
-    'description'  => '',
-
-    'fields' => array(
-
-      array(
-        'field_name'            => 'repeatable-field',
-        'field_type'            => 'text',
-        'repeatable'            => true,
-        'field_label'           => 'Repeatable Field',
-        'description'           => 'A Repeatable field.',
-        'markup_function'       => 'standard_metabox_html'
-      ),
-
-
-    )
+    'fields' => $roockies_fields[0]
   ),
 
+  'mentores-metabox'=>array(
 
+    'post_type'    => 'mentores',
+    'name'         => 'mentores-cpt-metaboxes',
+    'title'        => 'Docentes iLab',
+    'description'  => 'Ingresa la información sobre Docente.',
 
+    'fields' => $mentores_fields[0]
+  ),
 
 );
 

@@ -7,12 +7,6 @@ $cpts = array(
   /*
   cpts iLab v2
   */
-  array(
-    'post_type' => 'aliados',
-    'hierarchical' => 'false',
-    'singular' => "Logo de Aliado",
-    'plural' => "Logos de Aliados",//este aparece en el menu del backend
-  ),
 
   array(
     'post_type' => 'staff',
@@ -33,7 +27,19 @@ $cpts = array(
     'hierarchical' => 'false',
     'singular' => "iLab Mentor",
     'plural' => "iLab Mentores"
-  )
+  ),
+  array(
+    'post_type' => 'aliados',
+    'hierarchical' => 'false',
+    'singular' => "Logo de Aliado",
+    'plural' => "iLab Aliados",//este aparece en el menu del backend
+  ),
+  array(
+    'post_type' => 'social',
+    'hierarchical' => 'false',
+    'singular' => "Red Social",
+    'plural' => "iLab Redes",//este aparece en el menu del backend
+  ),
 
 
 );
