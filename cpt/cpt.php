@@ -32,13 +32,25 @@ $cpts = array(
     'post_type' => 'aliados',
     'hierarchical' => 'false',
     'singular' => "Logo de Aliado",
-    'plural' => "iLab Aliados",//este aparece en el menu del backend
+    'plural' => "iLab Aliados",//este aparece en el menu del backen
   ),
   array(
     'post_type' => 'social',
     'hierarchical' => 'false',
     'singular' => "Red Social",
-    'plural' => "iLab Redes",//este aparece en el menu del backend
+    'plural' => "iLab Redes",
+  ),
+  array(
+    'post_type' => 'banners-sidebar',
+    'hierarchical' => 'false',
+    'singular' => "Slider Sidebar",
+    'plural' => "iBanners Sidebar",
+  ),
+  array(
+    'post_type' => 'banners-footer',
+    'hierarchical' => 'false',
+    'singular' => "Slider Footer",
+    'plural' => "iBanners Footer",
   ),
 
 

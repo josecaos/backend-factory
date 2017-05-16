@@ -156,6 +156,31 @@ $mentores_fields[] = array(
   )
 );
 //
+$sidebar_banner_slider_fields[] = array(
+  // titulo logo
+  array(
+    'field_name'            => 'textp-banner',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Texto banner',
+    'description'           => 'Agrega texto sobre la imágen(Banner)',
+    // 'markup_function'       => 'standard_metabox_markup',
+  )
+);
+$footer_banner_slider_fields[] = array(
+  // titulo logo
+  array(
+    'field_name'            => 'banner-texto',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Texto banner',
+    'description'           => 'Agrega texto sobre la imágen(Banner)',
+    // 'markup_function'       => 'standard_metabox_markup',
+  )
+);
+//
 $metaboxes = array(
 
   'aliados-metabox'=>array(
@@ -207,6 +232,25 @@ $metaboxes = array(
     'description'  => 'Ingresa la información sobre Docente.',
 
     'fields' => $mentores_fields[0]
+  ),
+
+  'sidebar-banner-metabox'=>array(
+
+    'post_type'    => 'banners-sidebar',
+    'name'         => 'sidebar-banner-cpt-metabox',
+    'title'        => 'Sidebar Banner Slider',
+    'description'  => 'Ingresa Banner y texto para agregarlo al slider en la sección del sidebar.',
+
+    'fields' => $sidebar_banner_slider_fields[0]
+  ),
+  'footer-banner-metabox'=>array(
+
+    'post_type'    => 'banners-footer',
+    'name'         => 'footer-banner-cpt-metabox',
+    'title'        => 'Footer Banner Slider',
+    'description'  => 'Ingresa Banner y texto para agregarlo al slider en la sección del footer.',
+
+    'fields' => $footer_banner_slider_fields[0]
   ),
 
 );
