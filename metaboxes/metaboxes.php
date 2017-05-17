@@ -123,6 +123,37 @@ $roockies_fields[] = array(
     'markup_function'       => 'standard_metabox_markup',
   )
 );
+$p_roockies_fields[] = array(
+  // nombre proyecto - Integrantes - descripcion
+  array(
+    'field_name'            => 'nombre-proyecto',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Nombre proyecto',
+    'description'           => 'Ingresa el nombre del proyecto.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'integrantes-proyecto',
+    'field_type'            => $field_types[7],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Integrantes',
+    'description'           => 'Ingresa los integrantes del proyecto.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'descripcion-proyecto',
+    'field_type'            => $field_types[7],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Descripción Proyecto',
+    'description'           => 'Ingresa los proyectos del estudiante.',
+    'markup_function'       => 'standard_metabox_markup',
+  )
+);
+
 // mentores
 // Informacion roockies
 $mentores_fields[] = array(
@@ -155,11 +186,41 @@ $mentores_fields[] = array(
     'markup_function'       => 'standard_metabox_markup',
   )
 );
+$extended_fields[] = array(
+  // nombre, Area y Bio
+  array(
+    'field_name'            => 'extended-nombre',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Nombre',
+    'description'           => 'Ingresa el nombre del colaborador.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'extended-area',
+    'field_type'            => $field_types[0],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Área',
+    'description'           => 'Ingresa el área del colaborador.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'extended-bio',
+    'field_type'            => $field_types[7],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Bio',
+    'description'           => 'Ingresa la información del colaborador.',
+    'markup_function'       => 'standard_metabox_markup',
+  )
+);
 //
 $sidebar_banner_slider_fields[] = array(
   // titulo logo
   array(
-    'field_name'            => 'textp-banner',
+    'field_name'            => 'texto-banner',
     'field_type'            => $field_types[0],
     'repeatable'            => false,
     'related_post_types'    => false,
@@ -181,6 +242,8 @@ $footer_banner_slider_fields[] = array(
   )
 );
 //
+//
+//
 $metaboxes = array(
 
   'aliados-metabox'=>array(
@@ -193,7 +256,7 @@ $metaboxes = array(
 
     'fields' => $aliados_fields[0]
   ),
-
+//
   'social-metabox'=>array(
 
     'post_type'    => 'social',
@@ -203,7 +266,7 @@ $metaboxes = array(
 
     'fields' => $social_fields
   ),
-
+//
   'staff-metabox'=>array(
 
     'post_type'    => 'staff',
@@ -213,7 +276,7 @@ $metaboxes = array(
 
     'fields' => $staff_fields[0]
   ),
-
+//
   'roockies-metabox'=>array(
 
     'post_type'    => 'roockies',
@@ -224,6 +287,16 @@ $metaboxes = array(
     'fields' => $roockies_fields[0]
   ),
 
+  'roockies-proyectos-metabox'=>array(
+
+    'post_type'    => 'proyectos-roockies',
+    'name'         => 'proyectos-roockies-cpt-metaboxes',
+    'title'        => 'Proyectos de estudiantes de iLab',
+    'description'  => 'Ingresa la información sobre los proyectos de los Roockies.',
+
+    'fields' => $p_roockies_fields[0]
+  ),
+//
   'mentores-metabox'=>array(
 
     'post_type'    => 'mentores',
@@ -233,20 +306,31 @@ $metaboxes = array(
 
     'fields' => $mentores_fields[0]
   ),
+  //
+  'extended-team-metabox'=>array(
 
+    'post_type'    => 'extended-team',
+    'name'         => 'mentores-cpt-metaboxes',
+    'title'        => 'Colaboradores iLab',
+    'description'  => 'Ingresa la información sobre Colaborador.',
+
+    'fields' => $extended_fields[0]
+  ),
+//
   'sidebar-banner-metabox'=>array(
 
-    'post_type'    => 'banners-sidebar',
-    'name'         => 'sidebar-banner-cpt-metabox',
+    'post_type'    => 'banner-sidebar',
+    'name'         => 'sidebar-banner-cpt-metaboxes',
     'title'        => 'Sidebar Banner Slider',
     'description'  => 'Ingresa Banner y texto para agregarlo al slider en la sección del sidebar.',
 
     'fields' => $sidebar_banner_slider_fields[0]
   ),
+  //
   'footer-banner-metabox'=>array(
 
-    'post_type'    => 'banners-footer',
-    'name'         => 'footer-banner-cpt-metabox',
+    'post_type'    => 'banner-footer',
+    'name'         => 'footer-banner-cpt-metaboxes',
     'title'        => 'Footer Banner Slider',
     'description'  => 'Ingresa Banner y texto para agregarlo al slider en la sección del footer.',
 

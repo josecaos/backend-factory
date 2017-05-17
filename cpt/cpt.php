@@ -23,11 +23,26 @@ $cpts = array(
   ),
 
   array(
+    'post_type' => 'proyectos-roockies',
+    'hierarchical' => 'false',
+    'singular' => "iLab Proyectos Rockies",
+    'plural' => "iLab Proyectos Roockies",
+  ),
+
+  array(
     'post_type' => 'mentores',
     'hierarchical' => 'false',
     'singular' => "iLab Mentor",
     'plural' => "iLab Mentores"
   ),
+
+  array(
+    'post_type' => 'extended-team',
+    'hierarchical' => 'false',
+    'singular' => "Ilab Colaborators",
+    'plural' => "iLab Extended Team",
+  ),
+
   array(
     'post_type' => 'aliados',
     'hierarchical' => 'false',
@@ -40,19 +55,20 @@ $cpts = array(
     'singular' => "Red Social",
     'plural' => "iLab Redes",
   ),
+
   array(
-    'post_type' => 'banners-sidebar',
+    'post_type' => 'banner-sidebar',
     'hierarchical' => 'false',
     'singular' => "Slider Sidebar",
     'plural' => "iBanners Sidebar",
   ),
+
   array(
-    'post_type' => 'banners-footer',
+    'post_type' => 'banner-footer',
     'hierarchical' => 'false',
     'singular' => "Slider Footer",
     'plural' => "iBanners Footer",
   ),
-
 
 );
 
