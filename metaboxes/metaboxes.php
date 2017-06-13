@@ -121,6 +121,15 @@ $roockies_fields[] = array(
     'field_label'           => 'Carrera',
     'description'           => 'Ingresa el la información del integrante.',
     'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'roockie-bio',
+    'field_type'            => $field_types[7],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Biografía',
+    'description'           => 'Ingresa el la información del integrante.',
+    'markup_function'       => 'standard_metabox_markup',
   )
 );
 $p_roockies_fields[] = array(
@@ -183,6 +192,15 @@ $mentores_fields[] = array(
     'related_post_types'    => false,
     'field_label'           => 'Tema',
     'description'           => 'Ingresa tema del docente.',
+    'markup_function'       => 'standard_metabox_markup',
+  ),
+  array(
+    'field_name'            => 'mentor-bio',
+    'field_type'            => $field_types[7],
+    'repeatable'            => false,
+    'related_post_types'    => false,
+    'field_label'           => 'Biografía',
+    'description'           => 'Ingresa el la información del docente.',
     'markup_function'       => 'standard_metabox_markup',
   )
 );

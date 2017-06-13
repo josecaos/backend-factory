@@ -12,7 +12,8 @@ $cpts = array(
     'post_type' => 'staff',
     'hierarchical' => 'false',
     'singular' => "iLab Staff",
-    'plural' => "iLab Staff"
+    'plural' => "iLab Staff",
+    'has_archive' => false
   ),
 
   array(
@@ -49,6 +50,7 @@ $cpts = array(
     'singular' => "Logo de Aliado",
     'plural' => "iLab Aliados",//este aparece en el menu del backen
   ),
+
   array(
     'post_type' => 'social',
     'hierarchical' => 'false',
@@ -68,7 +70,7 @@ $cpts = array(
     'hierarchical' => 'false',
     'singular' => "Slider Footer",
     'plural' => "iBanners Footer",
-  ),
+  )
 
 );
 
