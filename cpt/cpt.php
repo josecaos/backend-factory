@@ -52,13 +52,6 @@ $cpts = array(
   ),
 
   array(
-    'post_type' => 'social',
-    'hierarchical' => 'false',
-    'singular' => "Red Social",
-    'plural' => "iLab Redes",
-  ),
-
-  array(
     'post_type' => 'banner-sidebar',
     'hierarchical' => 'false',
     'singular' => "Slider Sidebar",
@@ -70,6 +63,13 @@ $cpts = array(
     'hierarchical' => 'false',
     'singular' => "Slider Footer",
     'plural' => "iBanners Footer",
+  ),
+
+  array(
+    'post_type' => 'ilab-social',
+    'hierarchical' => 'false',
+    'singular' => "Red Social",
+    'plural' => "iLab Redes",
   )
 
 );

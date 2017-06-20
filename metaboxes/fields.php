@@ -1,9 +1,5 @@
 <?php
 
-global $metaboxes;
-
-// include_once "metaboxes/fields.php";
-//debuggear para que los "fields queden en otro archivo"
 $aliados_fields = array();
 $social_fields = array();
 $field_types = array( "text", "url", "email", "integer", "float", "date", "time", "textarea", "html", "upload" );
@@ -225,7 +221,7 @@ $aliados_fields[] = array(
 $sidebar_banner_slider_fields[] = array(
   // titulo logo
   array(
-    'field_name'            => 'side-texto',
+    'field_name'            => 'side-banner',
     'field_type'            => $field_types[0],
     'repeatable'            => false,
     'related_post_types'    => false,
@@ -265,10 +261,10 @@ $footer_banner_slider_fields[] = array(
   )
 );
 // redes sociales icono + link
-$redes_fields[] = array(
+$social_fields[] = array(
   // titulo logo
   array(
-    'field_name'            => 'redes-icono',
+    'field_name'            => 'social-fontawesome',
     'field_type'            => $field_types[0],
     'repeatable'            => false,
     'related_post_types'    => false,
@@ -277,7 +273,7 @@ $redes_fields[] = array(
     // 'markup_function'       => 'standard_metabox_markup',
   ),
   array(
-    'field_name'            => 'redes-link',
+    'field_name'            => 'social-link',
     'field_type'            => $field_types[0],
     'repeatable'            => false,
     'related_post_types'    => false,
@@ -287,99 +283,3 @@ $redes_fields[] = array(
   )
 );
 //
-//
-//
-$metaboxes = array(
-
-  'staff-metabox'=>array(
-
-    'post_type'    => 'staff',
-    'name'         => 'staff-cpt-metaboxes',
-    'title'        => 'Equípo de iLab',
-    'description'  => 'Ingresa los integrantes activos de el equipo iLab.',
-
-    'fields' => $staff_fields[0]
-  ),
-//
-  'roockies-metabox'=>array(
-
-    'post_type'    => 'roockies',
-    'name'         => 'roockies-cpt-metaboxes',
-    'title'        => 'Estudiantes de iLab',
-    'description'  => 'Ingresa la información sobre los Roockies.',
-
-    'fields' => $roockies_fields[0]
-  ),
-
-  'roockies-proyectos-metabox'=>array(
-
-    'post_type'    => 'proyectos-roockies',
-    'name'         => 'proyectos-roockies-cpt-metaboxes',
-    'title'        => 'Proyectos de estudiantes de iLab',
-    'description'  => 'Ingresa la información sobre los proyectos de los Roockies.',
-
-    'fields' => $p_roockies_fields[0]
-  ),
-//
-  'mentores-metabox'=>array(
-
-    'post_type'    => 'mentores',
-    'name'         => 'mentores-cpt-metaboxes',
-    'title'        => 'Docentes iLab',
-    'description'  => 'Ingresa la información sobre Docente.',
-
-    'fields' => $mentores_fields[0]
-  ),
-  //
-  'extended-team-metabox'=>array(
-
-    'post_type'    => 'extended-team',
-    'name'         => 'mentores-cpt-metaboxes',
-    'title'        => 'Colaboradores iLab',
-    'description'  => 'Ingresa la información sobre Colaborador.',
-
-    'fields' => $extended_fields[0]
-  ),
-  //
-  'aliados-metabox'=>array(
-
-    'post_type'    => 'aliados',
-    'name'         => 'aliados-cpt-metabox',
-    'title'        => 'Nombre de aliado',
-
-    'description'  => 'Ingresa el título de logo aliado.',
-
-    'fields' => $aliados_fields[0]
-  ),
-//
-  'sidebar-banner-metabox'=>array(
-
-    'post_type'    => 'banner-sidebar',
-    'name'         => 'sidebar-banner-cpt-metaboxes',
-    'title'        => 'Sidebar Banner Slider',
-    'description'  => 'Ingresa Banner y texto para agregarlo al slider en la sección del sidebar.',
-
-    'fields' => $sidebar_banner_slider_fields[0]
-  ),
-  //
-  'footer-banner-metabox'=>array(
-
-    'post_type'    => 'banner-footer',
-    'name'         => 'footer-banner-cpt-metaboxes',
-    'title'        => 'Footer Banner Slider',
-    'description'  => 'Ingresa Banner y texto para agregarlo al slider en la sección del footer.',
-
-    'fields' => $footer_banner_slider_fields[0]
-  ),
-  //
-  'social-metabox'=>array(
-
-    'post_type'    => 'ilab-social',
-    'name'         => 'social-cpt-metaboxes',
-    'title'        => 'Redes sociales',
-    'description'  => 'Ingresa el nombre del ícono, de la librería font-awesome. Lista de íconos: http://fontawesome.io/cheatsheet',
-
-    'fields' => $redes_fields[0]
-  ),
-//
-);
