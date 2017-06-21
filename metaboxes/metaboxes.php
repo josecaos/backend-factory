@@ -265,10 +265,10 @@ $footer_banner_slider_fields[] = array(
   )
 );
 // redes sociales icono + link
-$redes_fields[] = array(
+$social_fields[] = array(
   // titulo logo
   array(
-    'field_name'            => 'redes-icono',
+    'field_name'            => 'red-icono',
     'field_type'            => $field_types[0],
     'repeatable'            => false,
     'related_post_types'    => false,
@@ -277,7 +277,7 @@ $redes_fields[] = array(
     // 'markup_function'       => 'standard_metabox_markup',
   ),
   array(
-    'field_name'            => 'redes-link',
+    'field_name'            => 'red-link',
     'field_type'            => $field_types[0],
     'repeatable'            => false,
     'related_post_types'    => false,
@@ -379,7 +379,7 @@ $metaboxes = array(
     'title'        => 'Redes sociales',
     'description'  => 'Ingresa el nombre del ícono, de la librería font-awesome. Lista de íconos: http://fontawesome.io/cheatsheet',
 
-    'fields' => $redes_fields[0]
+    'fields' => $social_fields[0]
   ),
 //
 );
